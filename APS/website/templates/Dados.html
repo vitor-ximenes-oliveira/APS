@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <body>
+
+            '''dia = models.DateField()
+            hora = models.TimeField()
+            estacao = models.CharField(max_length=20,blank = False)
+            codigo = models.CharField(max_length=4,blank = False)
+            poluente = models.CharField(max_length=2,blank = False)
+            valor = models.FloatField()
+            unidade = models.CharField(max_length=2,blank = False)
+            tipo = models.CharField(max_length=10,blank = False)'''
+
+            <form method="POST" action="">
+                {% csrf_token %}
+            <label name="">Dia:</label>
+            <input type="text" name="dia" ><br>
+
+            <label name="">Hora:</label>
+            <input type="datetime" name="hora" ><br>
+
+            <label name="">Estação:</label>
+            <input type="text" name="estacao" ><br>
+
+            <label name="">Código:</label>
+            <input type="text" name="codigo" ><br>
+
+            <label name="">Poluente:</label>
+            <input type="text" name="poluente" ><br>
+
+            <label name="">Valor:</label>
+            <input type="text" name="valor" ><br>
+
+            <label name="">Unidade:</label>
+            <input type="text" name="unidade" ><br>
+
+            <label name="">Tipo:</label>
+            <input type="" name="tipo" ><br>
+
+            {% for dado in dados %}
+            {{dado.dia}} {{dado.hora}} {{dado.estacao}} {{dado.codigo}} {{dado.poluente}} {{dado.valor}} {{dado.unidade}} {{dado.tipo}}
+            <input type="submit" name="editar" value="Editar">
+            <input type="submit" name="excluir" value="Excluir"><br>
+            {% endfor %}
+          
+            <input type="submit" name="adicionar" value="Adicionar">
+            <a href="../inserirDado/{{id}}">Adicionar</a>
+        </form>
+        </body>
+    </head>
+</html>
+
