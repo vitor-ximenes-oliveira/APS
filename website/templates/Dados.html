@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <body>
+
+            <form method="POST" action="">
+                {% csrf_token %}
+
+            <label name="">Dia:</label>
+            <input type="text" name="dia" ><br>
+
+            <label name="">Hora:</label>
+            <input type="time" name="hora" ><br>
+
+            <label name="">Estação:</label>
+            <input type="text" name="estacao" ><br>
+
+            <label name="">Código:</label>
+            <input type="text" name="codigo" ><br>
+
+            <label name="">Poluente:</label>
+            <input type="text" name="poluente" ><br>
+
+            <label name="">Valor:</label>
+            <input type="text" name="valor" ><br>
+
+            <label name="">Unidade:</label>
+            <input type="text" name="unidade" ><br>
+
+            <label name="">Tipo:</label>
+            <input type="" name="tipo" ><br>
+             <h2>Dados</h2>   
+            {% for dado in dados %}
+            
+            {{dado.dia}} {{dado.hora}} {{dado.estacao}} {{dado.codigo}} {{dado.poluente}} {{dado.valor}} {{dado.unidade}} {{dado.tipo}}
+            <input type="submit" name="editar" value="Editar">
+            <input type="submit" name="excluir" value="Excluir"><br>
+            {% endfor %}
+          
+            <input type="submit" name="adicionar" value="Adicionar">
+            
+        </form>
+        {% for message in messages %}
+        <p id="messages">{{message}}</p>
+      {% endfor %}
+        </body>
+    </head>
+</html>
+
