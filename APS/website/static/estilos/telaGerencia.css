@@ -1,0 +1,39 @@
+.container_main {
+  background: #00ff7f;
+  padding: 4em;
+}
+
+.tabela_gerente {
+    border: solid 1.5px;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.tabela_gerente thead tr th {
+  border-bottom: solid 2px #000;
+}
+
+.tabela_gerente tbody tr td {
+    border-bottom: solid 2px #A9A9A9;
+}
+
+.tabela_gerente td {
+  text-align: center;
+}
+
+.container_Btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  padding: 20px 0;
+}
+
+.container_Btns button {
+  width: 20em;
+  border-radius: 15px;
+  border: solid 1px;
+  background-color: #479a54;
+  color: #fff;
+}

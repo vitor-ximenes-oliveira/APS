@@ -1,0 +1,51 @@
+nav.navbar.navbar-expand-lg.bg-light {
+  background: #ffdead !important;
+}
+
+.btn_logout form {
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn_logout button {
+  width: 20%;
+
+  text-align: center;
+
+  height: 2em;
+
+  border: solid 1px;
+
+  border-radius: 5px;
+
+  margin-left: 350px;
+
+  margin-top: 18px;
+}
+
+.btn_logout :hover {
+  color: #cc0e17;
+}
+header {
+  background-color: #377B3E;
+  display: flex;
+  gap: 1em;
+}
+
+header img {
+  width: 3em;
+  padding: 0.5em;
+}
+
+table.tableHeaderProfessor td a {
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(100, 92, 92);
+  /* border-right: solid 1px; */
+
+  padding: 1em;
+}
+
+table.tableHeaderProfessor td a:hover {
+  color: rgb(143, 40, 40);
+}

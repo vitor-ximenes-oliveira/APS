@@ -1,11 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
-}
-
-header {
-    background-color:aqua;
-    display: flex;
-    gap: 3em;
+  background: #fff;
 }
 
 header img {
@@ -13,18 +8,11 @@ header img {
     padding: 0.5em;
 }
 
-/* table.tableHeaderProfessor td {
-    border-right: solid 1.5px;
-    border-left: solid 1.5px;
-    padding: 0.5em;
-} */
-
 table.tableHeaderProfessor td a {
     text-decoration: none;
-    color: #000;
-    /* border-right: solid 1px; */
+    color: #ffffff;
     border-left: solid 1px;
-    padding: 1.45em;
+    /* padding: 1.45em; */
 }
 
 
@@ -32,4 +20,8 @@ table.tableHeaderProfessor td a:hover  {
     border: 2px solid #000;
     color: black;
     background-color: #acafb6;
+}
+
+button {
+    cursor: pointer ;
 }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/estilos/header.css" />
+    <link rel="stylesheet" href="../static/estilos/geral.css" />
+    <link rel="stylesheet" href="../static/estilos/cadastroEstacoes.css" />
+    <title>Estações</title>
+  </head>
+
+  <header class="headerProfessor">
+    <img src="../static/imagens/education.png" alt="SAE" />
+    <table class="tableHeaderProfessor">
+      <tr>
+        <td>
+          <a
+            class="nav-link"
+            aria-current="page"
+            href="../telaProfessor/{{idProfessor}}"
+            >Home</a
+          >
+        </td>
+        <td><a href="../enviar_arquivo/{{idProfessor}}">Enviar Arquivo</a></td>
+        <td><a href="../graficosFeedback/{{idProfessor}}">Ver Feedback</a></td>
+        <td>
+          <a href="../criarFormulario/{{idProfessor}}">Criar Formulário</a>
+        </td>
+        <td><a href="../inserirTurma/{{idProfessor}}">Criar Turma</a></td>
+      </tr>
+    </table>
+    <div class="btn_logout">
+      <form method="POST" action="">
+        {% csrf_token %}
+        <button name="Log out" href="sair">Log out</button>
+      </form>
+    </div>
+  </header>
+
+  <body>
+    <!-- {% for message in messages %} -->
+    <p id="messages">{{message}}</p>
+    <!-- {% endfor %} -->
+
+    <form method="POST" class="post-form" action="">
+      <!-- {% csrf_token %} -->
+      <div class="container_main">
+
+        <div class="container_CadastroProfessor">
+          <div class="campos_flex">
+            <div class="label-float">
+              <input
+                type="date"
+                name="al_data"
+                placeholder=" "
+                min="2022-11-13"
+                required
+              />
+              <label>Data</label>
+            </div>
+            <div class="label-float">
+              <input
+                type="time"
+                name="al_hora"
+                placeholder=" "
+                required
+                />
+              <label>Hora</label>
+            </div>
+          </div>
+          <div class="campos_flex">
+            <div class="label-float">
+              <input
+                type="text"
+                name="al_estacao"
+                placeholder=" "
+                required
+              />
+              <label>Estação</label>
+            </div>
+            <div class="label-float">
+                <input
+                  type="text"
+                  name="al_codigo"
+                  placeholder=" "
+                  required
+                />
+                <label>Código</label>
+              </div>
+            
+          </div>
+          <div class="campos_flex">
+            <div class="label-float">
+              <input
+                type="text"
+                name="al_poluente"
+                placeholder=" "
+                required
+              />
+              <label>Poluente</label>
+            </div>
+            <div class="label-float">
+              <input
+                type="text"
+                name="al_valor"
+                placeholder=" "
+                required
+              />
+              <label>Valor</label>
+            </div>
+          </div>
+
+          <div class="campos_flex">
+            <div class="label-float">
+              <input
+                type="text"
+                name="al_unidade"
+                placeholder=" "
+                required
+              />
+              <label>Unidade</label>
+            </div>
+            <div class="label-float">
+              <input
+                type="text"
+                name="al_tipo"
+                placeholder=" "
+                required
+              />
+              <label>Tipo</label>
+            </div>
+          </div>
+
+          <button class="btn" type="submit" value="CriaConta">Criar</button>
+        </div>
+      </div>
+    </form>
+  </body>
+
+  <script>
+    document.getElementById("card_form").onclicked = function () {};
+  </script>
+</html>

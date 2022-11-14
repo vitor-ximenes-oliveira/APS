@@ -8,7 +8,8 @@ body {
   padding-top: 13px;
 }
 
-.label-float input {
+.label-float input,
+.label-float select {
   border: 0;
   border-bottom: 2px solid lightgrey;
   background-color: #ebeef5;
@@ -28,12 +29,16 @@ body {
   border-bottom: 2px solid #3951b2;
 }
 
+.label-float select:focus {
+  border-bottom: 2px solid #3951b2;
+}
+
 .label-float input::placeholder {
   color: transparent;
 }
 
 .label-float label {
-  color: #5d49cc;
+  color: #000;
   pointer-events: none;
   position: absolute;
   top: 0;
@@ -78,7 +83,7 @@ body {
 }
 
 .iconLogin {
-  background: #5a9bd5;
+  background: #00ff7f;
   height: 14em;
   border-radius: 140px;
   width: 14em;
@@ -90,7 +95,7 @@ body {
 }
 
 .container_login {
-  background-color: #5a9bd5;
+  background-color: #00ff7f;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -124,7 +129,7 @@ body {
 /* Inicio Cadastro Professor */
 
 .container_CadastroProfessor {
-  background-color: #5a9bd5;
+  background-color: #00ff7f;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -156,3 +161,10 @@ body {
 }
 
 /* Fim Cadastro Professor */
+
+select.form-select {
+  width: 9.2em;
+  height: 1.3em;
+  font-size: 30px;
+  text-align: center;
+}
